@@ -1,8 +1,8 @@
-clear; clc; format longG;
+clear; clc;
 
 yield = [270 255 235 210 195 180 155]
 temp = [40 60 80 100 120 140 160]
 
 qYield = input("Enter yield: ");
 estimateTemp = interp1(yield, temp, qYield, "linear", "extrap");
-fprintf("Estimated temp at %d MPA is %d C°.\n", qYield, estimateTemp)
+fprintf("Estimated temp at %d MPA is %.5f C°.\n", qYield, estimateTemp)
